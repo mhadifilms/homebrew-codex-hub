@@ -49,9 +49,10 @@ class CodexHub < Formula
   end
 
   def caveats
+    codex_install = OS.mac? ? "brew install --cask codex" : "npm install --global @openai/codex"
     <<~EOS
       Install the official Codex CLI if needed:
-        brew install --cask codex
+        #{codex_install}
       Sign in and launch:
         codex login
         codex-hub
