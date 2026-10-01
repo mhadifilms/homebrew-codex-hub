@@ -4,7 +4,7 @@ class CodexHub < Formula
   desc "Native terminal workspace for Codex projects and persistent chats"
   homepage "https://github.com/mhadifilms/codex-hub"
   url "https://github.com/mhadifilms/codex-hub/releases/download/v0.1.0/codex-hub-0.1.0.tar.gz"
-  sha256 "1f679ab94f0768aa21f887788cc4d6716e22cea8d20d3b38f97e1a522127debb"
+  sha256 "1214a14c09576ab966b87129b9cfe2dcf2ed56fba2036285f1fb6dfd6feffca0"
   license "MIT"
 
   depends_on "jpeg-turbo"
