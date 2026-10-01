@@ -1,0 +1,17 @@
+name: Formula
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew tap mhadifilms/codex-hub "$GITHUB_WORKSPACE"
+      - run: brew install --build-from-source mhadifilms/codex-hub/codex-hub
+      - run: brew test mhadifilms/codex-hub/codex-hub
