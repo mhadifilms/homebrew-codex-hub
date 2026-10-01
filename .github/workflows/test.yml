@@ -11,7 +11,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v5
-      - uses: Homebrew/actions/setup-homebrew@master
+      - uses: Homebrew/actions/setup-homebrew@main
       - run: brew tap mhadifilms/codex-hub "$GITHUB_WORKSPACE"
       - run: brew install --build-from-source mhadifilms/codex-hub/codex-hub
       - run: brew test mhadifilms/codex-hub/codex-hub
